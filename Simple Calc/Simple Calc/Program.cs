@@ -35,7 +35,7 @@ namespace Simple_Calc
                        
                 }
             }
-            Console.WriteLine(calculatorStack.Pop());
+               Console.WriteLine(calculatorStack.Pop());
 
 
 
