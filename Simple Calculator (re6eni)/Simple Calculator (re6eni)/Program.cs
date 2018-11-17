@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace Simple_calculator
+namespace Simple_Calculator__re6eni_
 {
     class Program
     {
@@ -15,24 +13,26 @@ namespace Simple_calculator
             var calculatorStack = new Stack<string>(values.Reverse());
 
 
-            while (calculatorStack.Count>1) {//poneje e while cikuyl gi po4vam otzad napred
+            while (calculatorStack.Count > 1)
+            {//poneje e while cikuyl gi po4vam otzad napred
                 int firstOperand = Int32.Parse(calculatorStack.Pop());
                 //int e tip specialno za C# a Int32 e tip za cqlata .Net
                 //platforma
                 string operand = calculatorStack.Pop();
                 int secondOperand = Int32.Parse(calculatorStack.Pop());
-                switch (operand) {
+                switch (operand)
+                {
                     case "+":
-                    calculatorStack.Push((firstOperand + secondOperand).ToString());
+                        calculatorStack.Push((firstOperand + secondOperand).ToString());
                         break;
 
                     case "-":
                         calculatorStack.Push((firstOperand - secondOperand).ToString());
                         break;
-                  
+
                 }
             }
-              Console.WriteLine(calculatorStack.Pop());
+            Console.WriteLine(calculatorStack.Pop());
 
         }
     }
